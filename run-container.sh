@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cur_dir=$(pwd)
+
 docker run \
-    -v /home/bbt/code/modelbrouwers/winkel/code/:/var/www/html/ \
+    -v $cur_dir/code/:/var/www/html/ \
     modelbrouwers/winkel
