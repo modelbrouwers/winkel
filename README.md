@@ -10,35 +10,6 @@ The expected code structure is:
     ➜  winkel git:(master) ✗ tree -L 3 .
     .
     ├── code
-    │   ├── static
-    │   │   ├── admin_tools
-    │   │   ├── azure.jquery.fine-uploader
-    │   │   ├── bg.b521ab9c64fd.jpg
-    │   │   ├── bg.jpg
-    │   │   ├── builds
-    │   │   ├── CACHE
-    │   │   ├── config.b57becad5dd4.js
-    │   │   ├── css
-    │   │   ├── django_extensions
-    │   │   ├── error.bb16ddb56cca.html
-    │   │   ├── fonts
-    │   │   ├── images
-    │   │   ├── jquery.fine-uploader
-    │   │   ├── jspm_packages
-    │   │   ├── kits
-    │   │   ├── LICENSE
-    │   │   ├── LICENSE.d4c51a0a6d26
-    │   │   ├── package.6a4cfac4198f.json
-    │   │   ├── PHP_CACHE
-    │   │   ├── privacy.html
-    │   │   ├── README.b97d1a875d09.md
-    │   │   ├── rest_framework
-    │   │   ├── robots.txt
-    │   │   ├── s3.fine-uploader
-    │   │   ├── s3.jquery.fine-uploader
-    │   │   ├── staticfiles.json
-    │   │   ├── SYSTEMJS
-    │   │   └── systemjs.json
     │   └── winkel
     │       ├── admin
     │       ├── catalog
@@ -72,12 +43,6 @@ The expected code structure is:
    `code/winkel/config.php` if needed to use the Docker NAT address for the DB
    host
 
-3. Build the image
+3. Bring up the service:
 
-        $ docker build -t modelbrouwers/winkel .
-
-4. Run the container
-
-        $ ./run-container.sh
-
-5. Navigate to `http://172.17.0.2/winkel/`
+    $ docker-compose up

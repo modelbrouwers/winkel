@@ -1,0 +1,8 @@
+/code/winkel/image/cache
+/code/winkel/image/data
+/code/winkel/system/cache
+/code/winkel/system/logs/*.log
+/code/winkel/system/logs/*.txt
+
+/code/winkel/vqmod/logs/
+/code/winkel/vqmod/vqcache/*.php

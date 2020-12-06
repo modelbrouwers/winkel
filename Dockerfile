@@ -14,3 +14,22 @@ RUN a2enmod rewrite
 
 COPY config/php.ini /usr/local/etc/php/
 # COPY config/conf.d/* /usr/local/etc/php/conf.d/
+
+RUN mkdir -p \
+    /var/www/html/winkel/image \
+    /var/www/html/winkel/vqmod/logs \
+    /var/www/html/winkel/vqmod/vqcache
+
+COPY ./code/ .
+
+VOLUME /var/www/html/winkel/image \
+    /var/www/html/winkel/cache \
+    /var/www/html/winkel/logs \
+    /var/www/html/winkel/vqmod/logs
+
+ENV DB_HOSTNAME=mysql \
+    DB_USERNAME=shop \
+    DB_PASSWORD=shop \
+    DB_NAME=shop \
+    DB_PREFIX=oc_ \
+    SELF_ADDRESS=http://localhost
